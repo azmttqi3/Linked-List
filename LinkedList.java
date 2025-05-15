@@ -36,7 +36,7 @@ public class LinkedList {
             return;
         }
         Node newNode = new Node(content);
-        newNode.next = prevNode;
+        newNode.next = prevNode.next;
         prevNode.next = newNode;
         System.out.println(content + " inserted after " + prevNode.content + ".");
     }
@@ -45,15 +45,15 @@ public class LinkedList {
     public void deleteNode(String key) {
         Node temp = head, prev = null;
 
-        //if head node itself holds the key to be deleted
+        // If head node itself holds the key to be deleted
         if (temp != null && temp.content.equals(key)) {
             head = temp.next; // Changed head
-            system.out.println(key + " deleted.");
+            System.out.println(key + " deleted.");
             return;
         }
 
         // Search for the key to be deleted, keep track of the previous node
-        while(temp != null && !temp.content.equals(key)) {
+        while (temp != null && !temp.content.equals(key)) {
             prev = temp;
             temp = temp.next;
         }
@@ -73,13 +73,13 @@ public class LinkedList {
     public void printList() {
         Node temp = head;
         while (temp != null) {
-            System.out.print(temp.content + " ->");
+            System.out.print(temp.content + " -> ");
             temp = temp.next;
         }
-        System.out.println(null);
+        System.out.println("null");
     }
 
-    // method to get a node by its data (for insertAfter example)
+    // Method to get a node by its data (for insertAfter example)
     public Node getNode(String content) {
         Node temp = head;
         while (temp != null) {
@@ -87,8 +87,8 @@ public class LinkedList {
                 return temp;
             }
             temp = temp.next;
-        }   
+        }
         return null;
     }
 
-}                                                                                   
+}
