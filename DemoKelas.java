@@ -18,5 +18,11 @@ public class DemoKelas {
        k.hapus("Naufal");
        System.out.println("Setelah hapus Naufal:");
        k.tampilkanSemua();
+
+       k.tambahDidepan(new Siswa("Ittaqi", 789));
+       k.tampilkanSemua();
+
+       k.tambahSetelah("Fikri", new Siswa("Hammami", 910));
+       k.tampilkanSemua();
    }
 }

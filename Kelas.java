@@ -47,12 +47,16 @@ public class Kelas {
 
     public void tambahSetelah(String nama, Siswa s){
         Siswa sekarang = pertama;
-        while (sekarang != null && !sekarang.nama.equals(nama)){
+        while (sekarang != null){
+            if (sekarang.nama.equals(nama)){
+                s.berikutnya = sekarang.berikutnya;
+                sekarang.berikutnya = s;
+                return;
+            }
             sekarang = sekarang.berikutnya;
-            sekarang.berikutnya = s;
-            if (sekarang == terakhir) terakhir = s;
         }
     }
+    
 
     public void hapus(String nama){
         if (pertama == null) return;

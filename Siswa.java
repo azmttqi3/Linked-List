@@ -1,17 +1,17 @@
 public class Siswa {
     String nama;
-    int nomorInduk;
+    // int nomorInduk;
     Siswa berikutnya;
 
     public Siswa(String nama, int nomorInduk) {
         this.nama = nama;
-        this.nomorInduk = nomorInduk;
+        // this.nomorInduk = nomorInduk;
         this.berikutnya = null;
     }
 
     public Siswa(String nama){
         this.nama = nama;
-        this.nomorInduk = 0;
+        // this.nomorInduk = 0;
         this.berikutnya = null;
     }
 
@@ -26,13 +26,13 @@ public class Siswa {
     public void setNama(String nama){
         this.nama = nama;
     }
-    public int getNomorInduk(){
-        return nomorInduk;
-    }
+    // public int getNomorInduk(){
+        // return nomorInduk;
+    // }
 
-    public void setNomorInduk(int nomorInduk){
-        this.nomorInduk = nomorInduk;
-    }
+    // public void setNomorInduk(int nomorInduk){
+        // this.nomorInduk = nomorInduk;
+    // }
 
     public Siswa getBerikutnya(){
         return berikutnya;
@@ -44,7 +44,9 @@ public class Siswa {
     
     @Override
     public String toString(){
-        return "Siswa{nama='" + nama + "', nomorInduk=" + nomorInduk + "}";
+        return "Siswa{nama='" + nama + "}";
+        // return "Siswa{nama='" + nama + "', nomorInduk=" + nomorInduk + "}";
+
     }
 
 
